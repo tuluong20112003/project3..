@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DatePicker Example</title>
+    <link rel="stylesheet" href="datepicker.css">
+</head>
+<body>
+    <div class="intro">CALENDAR</div>
+    <div id="datepicker1"></div>
+    <div id="datepicker2"></div>
+    <script src="DatePicker.js"></script>
+    <script>
+        var datePicker1 = new DatePicker("datepicker1", function(id, fixedDate) {
+            console.log("DatePicker with id", id, "selected date:", fixedDate.month + "/" + fixedDate.day + "/" + fixedDate.year);
+        });
+        datePicker1.render(new Date());
+
+        var datePicker2 = new DatePicker("datepicker2", function(id, fixedDate) {
+            console.log("DatePicker with id", id, "selected date:", fixedDate.month + "/" + fixedDate.day + "/" + fixedDate.year);
+        });
+        datePicker2.render(new Date("January 1, 2009"));
+    </script>
+</body>
+</html>
